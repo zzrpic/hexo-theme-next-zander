@@ -669,6 +669,10 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
 
+# Online contact 
+daovoice: true
+daovoice_app_id: 34e74f5b
+
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
@@ -901,10 +905,6 @@ canvas_ribbon:
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
-
-# Online contact 
-daovoice: true
-daovoice_app_id: 34e74f5b
 
 
 #! ---------------------------------------------------------------
