@@ -55,5 +55,6 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+  {% include '_third-party/gitter.swig' %}
 </body>
 </html>
