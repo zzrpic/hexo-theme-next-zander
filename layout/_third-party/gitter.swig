@@ -1,6 +1,8 @@
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'ZanderZhao/community'
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/sidecar.v1.min.js" async defer></script>
+{%- if theme.baidu_push %}
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: '{{ theme.gitter.gitter_room }}'
+    };
+  </script>
+  <script src="{{ theme.gitter.sidecar_js_src }}" async defer></script>
+{%- endif %}

@@ -670,9 +670,17 @@ gitalk:
   language:
 
 # Online contact 
-daovoice: true
-daovoice_app_id: 34e74f5b
+daovoice: 
+  enable: true
+  daovoice_app_id: 34e74f5b
+  daovoice_js: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js
+# daovoice_js like https://widget.daovoice.io/widget/XXXXXX.js, XXXX is daovoice_app_id, you can use CDN also.
 
+gitter:
+  enable: true
+  gitter_room: ZanderZhao/community
+  sidecar_js_srchttps: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/sidecar.v1.white.zander.min.js
+# If you don't have yourself style, please use  https://sidecar.gitter.im/dist/sidecar.v1.js
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
