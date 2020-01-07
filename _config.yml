@@ -673,8 +673,9 @@ gitalk:
 daovoice: 
   enable: true
   daovoice_app_id: 34e74f5b
-  daovoice_js: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js
-# daovoice_js like https://widget.daovoice.io/widget/XXXXXX.js, XXXX is daovoice_app_id, you can use CDN also.
+  daovoice_js: cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js
+# daovoice_js like  widget.daovoice.io/widget/XXXXXX.js, XXXX is daovoice_app_id, you can use CDN also.
+# without https://
 # /layout/_partials/head/head.swig 
 
 gitter:
