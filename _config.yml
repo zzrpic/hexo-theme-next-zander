@@ -172,7 +172,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://raw.githubusercontent.com/ZanderZhao/images/master/logo/logo.jpg
+  url: https://cdn.jsdelivr.net/gh/ZanderZhao/images/logo/logo.jpg
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
@@ -227,7 +227,7 @@ links:
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: true
+  number: false
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
@@ -287,9 +287,9 @@ reward_settings:
   #comment: Donate comment here.
 
 reward:
-  wechatpay: https://raw.githubusercontent.com/ZanderZhao/images/master/mypay/blog/wechat.jpg
-  alipay: https://raw.githubusercontent.com/ZanderZhao/images/master/mypay/blog/alipay.jpg
-  paypal: https://raw.githubusercontent.com/ZanderZhao/images/master/mypay/blog/paypal.jpg
+  wechatpay: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/wechat.jpg
+  alipay: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/alipay.jpg
+  paypal: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/paypal.jpg
   #wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
