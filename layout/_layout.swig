@@ -50,10 +50,10 @@
   {%- endif %}
   {% include '_third-party/math/index.swig' %}
   {% include '_third-party/quicklink.swig' %}
-  {% include '_third-party/gitter.swig' %}
   {{- next_inject('bodyEnd') }}
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+  {% include '_third-party/gitter.swig' %}
 </body>
 </html>
