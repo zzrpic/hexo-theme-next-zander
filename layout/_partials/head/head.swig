@@ -51,9 +51,9 @@
 	  a.src = g;
 	  a.charset = "utf-8";
 	  m.parentNode.insertBefore(a, m)
-  })(window, document, "script", "https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js", "daovoice")
+  })(window, document, "script", "{{ theme.daovoice.daovoice_js }}", "daovoice")
   daovoice('init', {
-	  app_id: "{{ theme.daovoice_app_id }}"
+	  app_id: "{{ theme.daovoice.daovoice_app_id }}"
   });
   daovoice('update'); < /script>
 {% endif %}
