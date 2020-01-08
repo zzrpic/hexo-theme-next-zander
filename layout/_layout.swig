@@ -55,5 +55,6 @@
     </div>
   {%- endif %}
   {% include '_third-party/gitter.swig' %}
+  {% include '_third-party/daovoice.swig' %}
 </body>
 </html>
