@@ -68,13 +68,13 @@ footer:
     # Hexo link (Powered by Hexo).
     enable: true
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
     enable: true
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -208,7 +208,7 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: 友链
+  title: Link
   # Available values: block | inline
   layout: inline
 
@@ -426,9 +426,9 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
-  host: //fonts.geekzu.org
+  host: #//fonts.geekzu.org
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -596,6 +596,12 @@ comments:
   lazyload: false
   # Modify texts or order for any navs, here are some examples.
   nav:
+    valine:
+      text: Talk with Github
+      order: -1
+    gitalk:
+      text: Anonymous | 匿名评论
+      order: -2
     #disqus:
     #  text: Load Disqus
     #  order: -1
@@ -633,19 +639,19 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
-  notify: false # Mail notifier
+  enable: true
+  appid: cA98zBYcl5uwg0zeLgE5nd7j-MdYXbMMI # Your leancloud application appid
+  appkey: BkMWzsMOnF0BrAfjjkH7LGzf # Your leancloud application appkey
+  notify: true # Mail notifier
   verify: false # Verification code
-  placeholder: Just go go # Comment box placeholder
+  placeholder:  # Just go go # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
-  comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: false # Whether to record the commenter IP
+  comment_count: false # If false, comment count will only be displayed in post page, not in home page
+  recordIP: true # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
 

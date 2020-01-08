@@ -54,7 +54,7 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
-  {% include '_third-party/gitter.swig' %}
-  {% include '_third-party/daovoice.swig' %}
+  {% include '_third-party/comments/gitter.swig' %}
+  {% include '_third-party/comments/daovoice.swig' %}
 </body>
 </html>
