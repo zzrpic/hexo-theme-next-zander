@@ -670,7 +670,7 @@ gitalk:
 
 # Online contact 
 daovoice: 
-  enable: true
+  enable: false
   daovoice_app_id: 34e74f5b
   daovoice_js: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js
 # daovoice_js like  https://widget.daovoice.io/widget/XXXXXX.js, XXXX is daovoice_app_id, you can use CDN also.
@@ -715,13 +715,13 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: 6bb7c6072673e28e82652b1d18465386 # <app_id>
+baidu_analytics: # 6bb7c6072673e28e82652b1d18465386 # <app_id>
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
 
 # CNZZ count
-cnzz_siteid: 1278069245
+cnzz_siteid: # 1278069245
 
 # Show number of visitors of each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
