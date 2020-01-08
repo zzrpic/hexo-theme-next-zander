@@ -129,7 +129,7 @@ menu:
   #categories: /categories/ || th
   #archives: /archives/ || archive
   #schedule: /schedule/ || calendar
-  友链: /about/friend.html || users
+  #友链: /about/friend.html || users
   #社交: https://zlogs.net/friend/social/ || fa-fw fa-comments
   about: /about/index.html || user
   #sitemap: /sitemap.xml || sitemap
