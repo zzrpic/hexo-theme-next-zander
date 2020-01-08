@@ -596,8 +596,8 @@ comments:
   lazyload: false
   # Modify texts or order for any navs, here are some examples.
   nav:
-    valine: Anonymous | 匿名评论
-      text: 
+    valine: 
+      text: Anonymous | 匿名评论
       order: -1
     gitalk:
       text: Github | Gitalk
