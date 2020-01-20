@@ -311,8 +311,8 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: true
-  url: https://github.com/ZanderZhao/zanderzhao.github.io/tree/source/source/ # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
+  #url: https://github.com/ZanderZhao/zanderzhao.github.io/tree/source/source/ # Link for view source
+  url: https://github.com/ZanderZhao/zanderzhao.github.io/edit/source/source/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
