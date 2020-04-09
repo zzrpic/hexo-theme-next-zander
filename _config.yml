@@ -40,10 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: https://img.zlogs.net/logo/zlogs/16x16.png
+  medium: https://img.zlogs.net/logo/zlogs/32x32.png
+  apple_touch_icon: https://img.zlogs.net/logo/zlogs/apple-touch-icon.png
+  safari_pinned_tab: https://img.zlogs.net/logo/zlogs/default.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -57,11 +57,11 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-heart
+    name: fa fa-user
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#888888"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright: Zander Zhao
@@ -72,13 +72,13 @@ footer:
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
     enable: true
-    icp: 苏ICP备19031242
+    icp: 苏ICP备19031242号
     # The digit in the num of gongan beian.
     gongan_id: 
     # The full num of gongan beian.
     gongan_num: 
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url: #http://www.beian.gov.cn/portal/download
+    gongan_icon_url: https://img.zlogs.net/logo/gov/cn/beian.png #http://www.beian.gov.cn/portal/download
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
@@ -118,7 +118,7 @@ darkmode: true
 menu:
   home: / || fa fa-home
   #vlog: https://zlogs.net/ || play-circle-o
-  note: /about/note.html || book
+  note: /about/note.html || fas fa-book
   #Github: https://github.com/ZanderZhao || github
   #tags: /tags/ || tags
   #categories: /categories/ || th
@@ -190,10 +190,10 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/ZanderZhao || github
-  E-Mail: mailto:zhongruizhao@hotmail.com || envelope
-  Gitter: https://gitter.im/ZanderZhao/community || fa-fw fa-comments
-  More: https://zlogs.net/about/social.html || ellipsis-v
+  GitHub: https://github.com/ZanderZhao #|| github
+  E-Mail: mailto:zhongruizhao@hotmail.com #|| envelope
+  Gitter: https://gitter.im/ZanderZhao/community #|| fa-fw fa-comments
+  More: https://zlogs.net/about/social.html #|| ellipsis-v
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -216,7 +216,7 @@ social:
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
-  enable: true
+  enable: false
   icons_only: false
   transition: false
 
