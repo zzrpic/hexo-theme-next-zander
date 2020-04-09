@@ -5,7 +5,7 @@
 
 # If false, merge configs from `_data/next.yml` into default configuration (rewrite).
 # If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
+# And if true, all config from default NexT `_config.yml` have to be copied into `next.yml`. Use if you know what you are doing.
 # Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
 override: false
 
@@ -17,7 +17,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -40,12 +40,15 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-zander.png
-  medium: /images/favicon-32x32-zander.png
-  apple_touch_icon: /images/apple-touch-icon-zander.png
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
+
+# Show multilingual switcher in footer.
+language_switcher: false
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
@@ -53,39 +56,29 @@ footer:
 
   # Icon between year and copyright info.
   icon:
-    # Icon name in Font Awesome. See: https://fontawesome.com/v4.7.0/icons/
-    # `heart` is recommended with animation in red (#ff0000).
-    name: user
+    # Icon name in Font Awesome. See: https://fontawesome.com/icons
+    name: fa fa-heart
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    color: "#ff0000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright: Zander Zhao
 
-  powered:
-    # Hexo link (Powered by Hexo).
-    enable: true
-    # Version info of Hexo after Hexo link (vX.X.X).
-    version: false
-
-  theme:
-    # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
-    # Version info of NexT after scheme info (vX.X.X).
-    version: false
+  # Powered by Hexo & NexT
+  powered: true
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 苏ICP备19031242
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 
     # The full num of gongan beian.
-    gongan_num:
+    gongan_num: 
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url:
+    gongan_icon_url: #http://www.beian.gov.cn/portal/download
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
@@ -105,9 +98,12 @@ creative_commons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
+#scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
+
+# Dark Mode
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -120,10 +116,9 @@ scheme: Mist
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || home
+  home: / || fa fa-home
   #vlog: https://zlogs.net/ || play-circle-o
-  导航: /about/guide.html || compass
-  笔记: https://zlogs.net/learn-books/ || book
+  note: /about/note.html || book
   #Github: https://github.com/ZanderZhao || github
   #tags: /tags/ || tags
   #categories: /categories/ || th
@@ -131,8 +126,17 @@ menu:
   #schedule: /schedule/ || calendar
   #友链: /about/friend.html || users
   #社交: https://zlogs.net/friend/social/ || fa-fw fa-comments
-  about: /about/index.html || user
+  about: /about/index.html || fa fa-user
   #sitemap: /sitemap.xml || sitemap
+
+  #home: / || fa fa-home
+  #about: /about/ || fa fa-user
+  #tags: /tags/ || fa fa-tags
+  #categories: /categories/ || fa fa-th
+  #archives: /archives/ || fa fa-archive
+  #schedule: /schedule/ || fa fa-calendar
+  #sitemap: /sitemap.xml || fa fa-sitemap
+  #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -172,11 +176,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://cdn.jsdelivr.net/gh/ZanderZhao/images/logo/logo.jpg
+  url: https://img.zlogs.net/avatar/zander/default.jpg
   # If true, the avatar will be dispalyed in circle.
-  rounded: true
+  rounded: false
   # If true, the avatar will be rotated with the cursor.
-  rotated: true
+  rotated: false
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -200,6 +204,17 @@ social:
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
 
+  #GitHub: https://github.com/yourname || fab fa-github
+  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  #Weibo: https://weibo.com/yourname || fab fa-weibo
+  #Google: https://plus.google.com/yourname || fab fa-google
+  #Twitter: https://twitter.com/yourname || fab fa-twitter
+  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
+  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+  #YouTube: https://youtube.com/yourname || fab fa-youtube
+  #Instagram: https://instagram.com/yourname || fab fa-instagram
+  #Skype: skype:yourname?call|chat || fab fa-skype
+
 social_icons:
   enable: true
   icons_only: false
@@ -207,8 +222,8 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: link
-  title: Link
+  icon: fa fa-link
+  title: Links
   # Available values: block | inline
   layout: inline
 
@@ -220,14 +235,12 @@ links:
   sjyvv: https://sjyvv.com/
   More: https://zlogs.net/about/friend.html
 
-
-
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: false
+  number: true
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
@@ -241,7 +254,7 @@ chat:
   enable: false
   #service: chatra
   #service: tidio
-  icon: comment # Icon name in Font Awesome, set false to disable icon.
+  icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
 
@@ -272,8 +285,6 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
-  awl: 4
-  wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
@@ -282,17 +293,23 @@ tag_icon: true
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: true
-  animation: true
+  enable: false
+  animation: false
   #comment: Donate comment here.
 
 reward:
-  wechatpay: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/wechat.jpg
-  alipay: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/alipay.jpg
-  paypal: https://cdn.jsdelivr.net/gh/ZanderZhao/images/mypay/blog/paypal.jpg
   #wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
+  #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
+
+# Subscribe through Telegram Channel, Twitter, etc.
+# Usage: `Key: permalink || icon` (Font Awesome)
+follow_me:
+  #Twitter: https://twitter.com/username || fab fa-twitter
+  #Telegram: https://t.me/channel_name || fab fa-telegram
+  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
@@ -311,8 +328,9 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: true
-  #url: https://github.com/ZanderZhao/zanderzhao.github.io/tree/source/source/ # Link for view source
-  url: https://github.com/ZanderZhao/zanderzhao.github.io/edit/source/source/ # Link for fork & edit
+  url: https://github.com/ZanderZhao/zanderzhao.github.io/edit/source/source/
+#  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
+  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
@@ -362,9 +380,6 @@ mobile_layout_economy: false
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
 
-# Hide sticky headers and color the menu bar on Safari (iOS / macOS).
-safari_rainbow: false
-
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
@@ -408,7 +423,7 @@ bookmark:
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
   enable: false
-  permalink: https://github.com/ZanderZhao
+  permalink: https://github.com/yourname
   title: Follow me on GitHub
 
 
@@ -427,8 +442,9 @@ github_banner:
 
 font:
   enable: false
-  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
-  host: #//fonts.geekzu.org
+
+  # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
+  host:
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -471,20 +487,12 @@ font:
 # Disable Baidu transformation on mobile devices.
 disable_baidu_transformation: false
 
-# Set a canonical link tag for your Hexo site.
-# See: https://support.google.com/webmasters/answer/139066
-# Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yoursite.com)
-canonical: true
-
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: true
-
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: false
 
 # Automatically add external URL with Base64 encrypt & decrypt.
-exturl: true
+exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
@@ -509,6 +517,7 @@ baidu_push: true
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # See: https://theme-next.org/docs/third-party-services/
+# More plugins: https://github.com/theme-next/awesome-next
 # You may need to install dependencies or set CDN URLs in `vendors`
 # There are two different CDN providers by default:
 #   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
@@ -536,7 +545,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: true
+pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -556,6 +565,7 @@ lazyload: false
 pangu: false
 
 # Quicklink Support
+# Do not enable both `pjax` and `quicklink`.
 # For more information: https://github.com/GoogleChromeLabs/quicklink
 # Front-matter (unsupport home archive).
 quicklink:
@@ -644,14 +654,14 @@ valine:
   appkey: BkMWzsMOnF0BrAfjjkH7LGzf # Your leancloud application appkey
   notify: true # Mail notifier
   verify: false # Verification code
-  placeholder:  # Just go go # Comment box placeholder
+  placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
   comment_count: false # If false, comment count will only be displayed in post page, not in home page
-  recordIP: true # Whether to record the commenter IP
+  recordIP: false # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
 
@@ -673,22 +683,6 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
-
-# Online contact 
-daovoice: 
-  enable: false
-  daovoice_app_id: 34e74f5b
-  daovoice_js: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/daovoice.white.zander.min.js
-# daovoice_js like  https://widget.daovoice.io/widget/XXXXXX.js, XXXX is daovoice_app_id, you can use CDN also.
-# /layout/_partials/head/head.swig 
-
-gitter:
-  enable: true
-  gitter_room: ZanderZhao/community
-  sidecar_js_src: https://cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/sidecar.v1.white.zander.min.js
-# If you don't have yourself style, please use  https://sidecar.gitter.im/dist/sidecar.v1.js
-# /layout/_third-party/gitter.swig
-# {{ theme.gitter.sidecar_js_src }}
 
 
 # ---------------------------------------------------------------
@@ -721,13 +715,13 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: # 6bb7c6072673e28e82652b1d18465386 # <app_id>
+baidu_analytics: # <app_id>
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
 
 # CNZZ count
-cnzz_siteid: # 1278069245
+cnzz_siteid:
 
 # Show number of visitors of each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
@@ -735,13 +729,14 @@ cnzz_siteid: # 1278069245
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: false
-  app_id: # <app_id>
-  app_key: # <app_key>
+  app_id: # <your app id>
+  app_key: # <your app key>
+  # Required for apps from CN region
+  server_url: # <your server url>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
   security: true
-  betterPerformance: false
 
 # Another tool to show number of visitors to each article.
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
@@ -755,13 +750,13 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: true
+  enable: false
   total_visitors: true
-  total_visitors_icon: user
+  total_visitors_icon: fa fa-user
   total_views: true
-  total_views_icon: eye
+  total_views_icon: fa fa-eye
   post_views: true
-  post_views_icon: eye
+  post_views_icon: fa fa-eye
 
 
 # ---------------------------------------------------------------
@@ -790,10 +785,10 @@ local_search:
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
-  unescape: true
+  unescape: false
   # Preload the search data when the page loads.
-  preload: true
-  
+  preload: false
+
 # Swiftype Search API Key
 swiftype_key:
 
@@ -844,16 +839,14 @@ tabs:
     tabs: false
     labels: true
 
-# PDF tag, requires two plugins: pdfObject and pdf.js
-# pdfObject will try to load pdf files natively, if failed, pdf.js will be used.
-# The following `cdn` setting is only for pdfObject, because cdn for pdf.js might be blocked by CORS policy.
-# So, you must install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
+# PDF tag
+# NexT will try to load pdf files natively, if failed, pdf.js will be used.
+# So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # See: https://github.com/theme-next/theme-next-pdf
 pdf:
-  enable: true
+  enable: false
   # Default height
   height: 500px
-
 
 # Mermaid tag
 mermaid:
@@ -904,17 +897,6 @@ three:
   canvas_lines: false
   canvas_sphere: false
 
-# Canvas-nest
-# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
-# For more information: https://github.com/hustcc/canvas-nest.js
-canvas_nest:
-  enable: false
-  onmobile: true # Display on mobile or not
-  color: "0,0,255" # RGB values, use `,` to separate
-  opacity: 0.5 # The opacity of line: 0~1
-  zIndex: -1 # z-index property of the background
-  count: 99 # The number of lines
-
 # Canvas-ribbon
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # For more information: https://github.com/zproo/canvas-ribbon
@@ -940,29 +922,25 @@ vendors:
 
   # Internal version: 3.1.0
   # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-  anime:
+  anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
 
-  # Internal version: 4.7.0
-  # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
-  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-  fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
+  # Internal version: 5.13.0
+  # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
+  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
+  fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
 
   # MathJax
-  # mathjax: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  # mathjax: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
-  # mhchem: //cdn.jsdelivr.net/npm/mathjax-mhchem@3
-  # mhchem: //cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.0
-  mathjax: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  mhchem:
+  # mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
   # KaTeX
   # katex: //cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
   # katex: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
   # copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
   # copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
-  katex:
-  copy_tex_js: https://cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
-  copy_tex_css: https://cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
+  katex: //cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
+  copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
+  copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
 
   # Internal version: 0.2.8
   # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
@@ -972,23 +950,23 @@ vendors:
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
   # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
   # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-  jquery:
-  fancybox:
-  fancybox_css:
+  jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+  fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
+  fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
   # Medium-zoom
   # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
-  mediumzoom:
+  mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
 
   # Lazyload
   # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.9.0/lozad.min.js
-  lazyload:
+  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
+  lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
 
   # Pangu
   # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
   # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
-  pangu:
+  pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
 
   # Quicklink
   # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
@@ -997,8 +975,8 @@ vendors:
   # DisqusJS
   # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   # disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-  disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
+  disqusjs_js:
+  disqusjs_css:
 
   # Valine
   # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
@@ -1007,61 +985,52 @@ vendors:
 
   # Gitalk
   # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
   gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+  gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
 
   # Algolia Search
-  # algolia_instant_js: //cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.js
-  # algolia_instant_css: //cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.css
-  algolia_instant_js:
-  algolia_instant_css:
-
-  # PDF
-  # pdfobject: //cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js
-  # pdfobject: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
-  pdfobject: //cdn.jsdelivr.net/gh/ZanderZhao/cdn/js/pdfobject.2.1.1.min.js
+  # algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
+  # instant_search: //cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
+  algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
+  instant_search: //cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
+  
 
   # Mermaid
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.0/mermaid.min.js
-  mermaid:
+  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js
+  mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
 
   # Internal version: 1.2.1
   # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
   # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
   # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
   # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-  velocity:
-  velocity_ui:
+  velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
+  velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
 
   # Internal version: 1.0.2
   # pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
   # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
   # pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
   # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
-  pace:
-  pace_css:
+  pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
+  pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
 
   # Internal version: 1.0.0
   # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
   # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
   # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
   # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
-  three:
-  three_waves:
-  canvas_lines:
-  canvas_sphere:
-
-  # Internal version: 1.0.0
-  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js
-  # canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest-nomobile.min.js
-  canvas_nest:
-  canvas_nest_nomobile:
+  three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
+  three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
+  canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
+  canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
 
   # Internal version: 1.0.0
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
+  
 
 # Assets
 css: css
